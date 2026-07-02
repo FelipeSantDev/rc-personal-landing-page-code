@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color: white;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+h1,
+h2 {
+  font-family: 'Playfair Display', serif;
+  line-height: 1.2;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #0d0d0d;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+.nav__logo img {
+  width: 8rem;
+}
+.nav__hamburguer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.nav__hamburguer span {
+  display: block;
+  width: 2.5rem;
+  height: 0.3rem;
+  background: #fff;
+  border-radius: 0.3rem;
+  transition: all 0.3s ease;
+}
+.nav__hamburguer.active span:nth-child(1) {
+  transform: rotate(45deg) translate(0.5rem, 0.6rem);
+}
+.nav__hamburguer.active span:nth-child(2) {
+  opacity: 0;
+}
+.nav__hamburguer.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(0.5rem, -0.6rem);
+}
+.nav__links {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #0d0d0d;
+  padding: 1rem 0;
+  list-style: none;
+}
+.nav__links li a {
+  display: block;
+  padding: 1rem 2rem;
+  color: #fff;
+  text-decoration: none;
+}
+.nav__links li a:hover {
+  color: #ff6b00;
+}
+.nav__links.active {
+  display: flex;
+}
+.nav__cta {
+  background: #ff6b00;
+  border-radius: 2rem;
+  margin: 0.5rem 2rem;
+  padding: 0.6rem 1.4rem;
+  text-align: center;
+}
+
+.hero {
+  background-image: url(/Imagem/Hero\ mobile.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 40rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  min-height: 100vh;
+}
+.hero__textos {
+  padding: 12rem 0 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.hero__textos h1 {
+  font-size: 3rem;
+  max-width: 100%;
+}
+.hero__textos h2 {
+  font-size: 1.9rem;
+  font-weight: 500;
+  max-width: 80%;
+}
+.hero__botoes {
+  display: flex;
+  gap: 1rem;
+  padding: 0 1.5rem;
+}
+.hero__botoes button {
+  font-size: 1.2rem;
+  padding: 0.5rem 0.3rem;
+  border-radius: 2rem;
+  background-color: #dc7800;
+  border: none;
+  color: #fff;
+}
+.hero__botoes button:nth-child(2) {
+  background-color: #fff;
+  border: 0.3rem solid #ffb800;
+  color: #000;
+}
+
+/*# sourceMappingURL=style.css.map */
