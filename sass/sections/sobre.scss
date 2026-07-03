@@ -5,7 +5,7 @@
   flex-direction: column;
   gap: 2rem;
   justify-content: center;
-  background: linear-gradient(to bottom, #1e1e1e 60%, #451c01);
+  background: linear-gradient(to bottom, $cor-preta-claro 60%, $cor-marrom-claro);
   padding: 2rem;
 
   &__textos {
@@ -30,6 +30,6 @@
     flex-direction: column;
     gap: 1.6rem;
     text-align: center;
-    color: #dc7800;
+    color: $cor-laranja-claro;
   }
 }

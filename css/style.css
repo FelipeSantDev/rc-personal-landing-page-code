@@ -140,7 +140,7 @@ img {
 .hero__botoes button:nth-child(2) {
   background-color: #fff;
   border: 0.3rem solid #ffb800;
-  color: #000;
+  color: #0d0d0d;
 }
 
 .sobre {
