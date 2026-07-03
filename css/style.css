@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;
   min-height: 100vh;
@@ -18,7 +18,7 @@ body {
 
 h1,
 h2 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   line-height: 1.2;
 }
 
@@ -99,7 +99,7 @@ img {
 }
 
 .hero {
-  background-image: url(/Imagem/Hero\ mobile.png);
+  background-image: url(/rc-personal-landing-page-code/Imagem/Hero\ mobile.png);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -141,6 +141,34 @@ img {
   background-color: #fff;
   border: 0.3rem solid #ffb800;
   color: #000;
+}
+
+.sobre {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  background: linear-gradient(to bottom, #1e1e1e 60%, #451c01);
+  padding: 3rem;
+}
+.sobre__textos {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.sobre__textos h3 {
+  font-size: 1.6rem;
+  text-align: center;
+}
+.sobre__textos p {
+  font-size: 1.3rem;
+}
+.sobre__icones {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  text-align: center;
+  color: #dc7800;
 }
 
 /*# sourceMappingURL=style.css.map */
