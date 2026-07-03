@@ -6,7 +6,7 @@
   gap: 2rem;
   justify-content: center;
   background: linear-gradient(to bottom, #1e1e1e 60%, #451c01);
-  padding: 3rem;
+  padding: 2rem;
 
   &__textos {
     display: flex;
@@ -20,6 +20,8 @@
 
     p {
       font-size: 1.3rem;
+      max-width: 96%;
+      text-align: center;
     }
   }
 

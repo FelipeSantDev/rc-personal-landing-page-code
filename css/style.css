@@ -149,7 +149,7 @@ img {
   gap: 2rem;
   justify-content: center;
   background: linear-gradient(to bottom, #1e1e1e 60%, #451c01);
-  padding: 3rem;
+  padding: 2rem;
 }
 .sobre__textos {
   display: flex;
@@ -162,6 +162,8 @@ img {
 }
 .sobre__textos p {
   font-size: 1.3rem;
+  max-width: 96%;
+  text-align: center;
 }
 .sobre__icones {
   display: flex;
