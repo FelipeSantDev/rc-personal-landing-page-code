@@ -1,0 +1,44 @@
+@use '../abstracts/auxiliares' as*;
+
+.servicos {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+
+  background: linear-gradient(to right, #2D1D12, #1E1E1E 30%);
+
+  &__icones {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &-icone {
+      border: 1rem;
+      border-radius: 2rem;
+      max-width: 80%;
+      background-color: #dc790048;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      align-items: center;
+      text-align: center;
+      gap: 1rem;
+
+      img {
+        width: 9rem;
+      }
+
+      p:nth-child(2) {
+        font-size: 1.9rem;
+        font-weight: 600;
+      }
+
+      p:nth-child(3) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

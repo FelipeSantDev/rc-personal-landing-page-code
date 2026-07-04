@@ -173,4 +173,41 @@ img {
   color: #dc7800;
 }
 
+.servicos {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+  background: linear-gradient(to right, #2D1D12, #1E1E1E 30%);
+}
+.servicos__icones {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.servicos__icones-icone {
+  border: 1rem;
+  border-radius: 2rem;
+  max-width: 80%;
+  background-color: rgba(220, 121, 0, 0.2823529412);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+.servicos__icones-icone img {
+  width: 9rem;
+}
+.servicos__icones-icone p:nth-child(2) {
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+.servicos__icones-icone p:nth-child(3) {
+  font-size: 1.4rem;
+}
+
 /*# sourceMappingURL=style.css.map */
