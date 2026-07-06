@@ -1,0 +1,72 @@
+@use '../abstracts/auxiliares' as*;
+
+.resultados {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(to bottom, $cor-preta-claro 60%, $cor-preta);
+
+  &__titulos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    align-items: center;
+
+    h4 {
+      font-size: 1.4rem;
+      font-weight: 300;
+    }
+  }
+
+  &__imagens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    &-marcos {
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+      text-align: center;
+      align-items: center;
+
+      img {
+        border-radius: 1rem;
+      }
+
+      p:nth-child(2) {
+        font-size: 1.7rem;
+      }
+
+      p:nth-child(3) {
+        font-size: 1.2rem;
+        text-align: justify;
+      }
+    }
+
+    &-camila {
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+      text-align: center;
+      align-items: center;
+
+      img {
+        border-radius: 1rem;
+      }
+
+      p:nth-child(2) {
+        font-size: 1.7rem;
+      }
+
+      p:nth-child(3) {
+        font-size: 1.2rem;
+        text-align: justify;
+      }
+    }
+  }
+}
