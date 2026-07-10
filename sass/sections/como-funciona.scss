@@ -1,0 +1,57 @@
+.comofunciona {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: center;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/Imagem/Como\ Funciona.png);
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);
+    z-index: 0;
+  }
+
+  &>* {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__metodos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &-metodo {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+
+      img {
+        width: 4rem;
+      }
+
+      &-textos {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+
+        P:nth-child(1) {
+          font-size: 1.5rem;
+        }
+
+        P:nth-child(2) {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}
