@@ -327,7 +327,7 @@ img {
   padding: 2rem;
   justify-content: center;
   gap: 3rem;
-  background: #0d0d0d;
+  background: linear-gradient(180deg, #020202, #1a0d05);
   color: #fff;
 }
 .depoimentos__carrossel {
@@ -394,6 +394,33 @@ img {
 .depoimentos__dots .active {
   background: #fff;
   transform: scale(1.2);
+}
+
+.ctafinal {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(190deg, #000000 50%, rgba(100, 60, 40, 0.5215686275));
+  padding: 2rem;
+}
+.ctafinal h3 {
+  font-size: 1.7rem;
+}
+.ctafinal p:nth-child(2) {
+  font-size: 1.3rem;
+}
+.ctafinal button {
+  background-color: #ff6b00;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.ctafinal p:nth-child(4) {
+  font-size: 1rem;
 }
 
 /*# sourceMappingURL=style.css.map */
