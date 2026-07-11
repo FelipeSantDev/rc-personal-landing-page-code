@@ -320,4 +320,80 @@ img {
   font-size: 1.3rem;
 }
 
+.depoimentos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  justify-content: center;
+  gap: 3rem;
+  background: #0d0d0d;
+  color: #fff;
+}
+.depoimentos__carrossel {
+  width: 100%;
+  position: relative;
+}
+.depoimentos__wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+.depoimentos__track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+.depoimentos__cards {
+  min-width: 100%;
+  flex: 0 0 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+.depoimentos__cards-fotos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.depoimentos__cards-fotos img {
+  border-radius: 50%;
+  width: 10rem;
+  height: 10rem;
+}
+.depoimentos__cards-estrelas {
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+}
+.depoimentos__cards-estrelas img {
+  width: 2rem;
+}
+.depoimentos__cards p:nth-child(3) {
+  font-size: 1.6rem;
+}
+.depoimentos__cards p:nth-child(4) {
+  font-size: 1.3rem;
+  text-align: justify;
+}
+.depoimentos__dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+.depoimentos__dots span {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: #666;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.depoimentos__dots .active {
+  background: #fff;
+  transform: scale(1.2);
+}
+
 /*# sourceMappingURL=style.css.map */

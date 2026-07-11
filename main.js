@@ -27,3 +27,62 @@ observer.observe(document.querySelector('.sobre__icones-icone1'));
 
 //Aparecer conteudo com scroll seção resultados
 AOS.init();
+
+//Carrossel
+const track = document.querySelector('.depoimentos__track');
+const cards = document.querySelectorAll('.depoimentos__cards');
+const dots = document.querySelectorAll('.depoimentos__dots span');
+
+let currentIndex = 0;
+
+function updateCarousel() {
+  track.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+  dots.forEach((dot) => {
+    dot.classList.remove('active');
+  });
+
+  dots[currentIndex].classList.add('active');
+}
+
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    currentIndex = index;
+    updateCarousel();
+  });
+});
+
+let startX = 0;
+let endX = 0;
+
+const wrapper = document.querySelector('.depoimentos__wrapper');
+
+wrapper.addEventListener('touchstart', (event) => {
+  startX = event.touches[0].clientX;
+});
+
+wrapper.addEventListener('touchend', (event) => {
+  endX = event.changedTouches[0].clientX;
+
+  handleSwipe();
+});
+
+function handleSwipe() {
+  const distance = startX - endX;
+
+  // Arrastou para esquerda
+  if (distance > 50) {
+    if (currentIndex < cards.length - 1) {
+      currentIndex++;
+    }
+  }
+
+  // Arrastou para direita
+  if (distance < -50) {
+    if (currentIndex > 0) {
+      currentIndex--;
+    }
+  }
+
+  updateCarousel();
+}
