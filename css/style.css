@@ -98,6 +98,52 @@ img {
   text-align: center;
 }
 
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: black;
+}
+.footer__links {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+}
+.footer__links-redessociais {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.footer__links-redessociais a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+}
+.footer__links-redessociais img {
+  width: 3rem;
+}
+.footer__navegacao ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 1rem;
+}
+.footer__navegacao ul li a {
+  font-size: 1.4rem;
+  color: white;
+  text-decoration: none;
+}
+
+.copyrigth {
+  text-align: center;
+  background-color: gray;
+  font-size: 1.2rem;
+}
+
 .hero {
   background-image: url(/Imagem/Hero\ mobile.png);
   background-position: top center;

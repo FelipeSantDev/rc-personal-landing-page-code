@@ -4,6 +4,9 @@
 
 @use 'base/base.scss';
 
+@use 'layout/header';
+@use 'layout/footer';
+
 @use 'sections/hero.scss';
 @use 'sections/sobre.scss';
 @use 'sections/servicos.scss';

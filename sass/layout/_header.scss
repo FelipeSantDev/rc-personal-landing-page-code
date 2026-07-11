@@ -1,3 +1,84 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the header of the site/application.
-// -----------------------------------------------------------------------------
+@use '../abstracts/auxiliares' as*;
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: $cor-preta;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+
+  &__logo img {
+    width: 8rem;
+  }
+
+  &__hamburguer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    span {
+      display: block;
+      width: 2.5rem;
+      height: 0.3rem;
+      background: $cor-branca;
+      border-radius: 0.3rem;
+      transition: all 0.3s ease;
+    }
+
+    &.active {
+      span:nth-child(1) {
+        transform: rotate(45deg) translate(0.5rem, 0.6rem);
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      span:nth-child(3) {
+        transform: rotate(-45deg) translate(0.5rem, -0.6rem);
+      }
+    }
+  }
+
+  &__links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: $cor-preta;
+    padding: 1rem 0;
+    list-style: none;
+
+    li a {
+      display: block;
+      padding: 1rem 2rem;
+      color: $cor-branca;
+      text-decoration: none;
+
+      &:hover {
+        color: $cor-laranja-escuro;
+      }
+    }
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__cta {
+    background: $cor-laranja-escuro;
+    border-radius: 2rem;
+    margin: 0.5rem 2rem;
+    padding: 0.6rem 1.4rem;
+    text-align: center;
+  }
+}
