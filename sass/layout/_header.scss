@@ -1,9 +1,7 @@
 @use '../abstracts/auxiliares' as*;
 
 .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flex($justify: space-between, $align: center);
   padding: 1rem 2rem;
   background: $cor-preta;
   position: fixed;
@@ -16,9 +14,7 @@
   }
 
   &__hamburguer {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    @include flex($direction: column, $gap: .5rem);
     background: none;
     border: none;
     cursor: pointer;

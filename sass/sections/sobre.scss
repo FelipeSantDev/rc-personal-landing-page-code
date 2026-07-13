@@ -1,17 +1,12 @@
 @use '../abstracts/auxiliares' as*;
 
 .sobre {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  justify-content: center;
+  @include flex($direction: column, $gap: 2rem, $justify: center);
   background: linear-gradient(to bottom, $cor-preta-claro 60%, $cor-marrom-claro);
   padding: 2rem;
 
   &__textos {
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
+    @include flex($direction: column, $gap: 1.6rem);
 
     h3 {
       font-size: 1.6rem;
@@ -26,9 +21,7 @@
   }
 
   &__icones {
-    display: flex;
-    flex-direction: column;
-    gap: 1.6rem;
+    @include flex($direction: column, $gap: 1.6rem);
     text-align: center;
     color: $cor-laranja-claro;
   }

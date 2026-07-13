@@ -1,12 +1,9 @@
 @use '../abstracts/auxiliares' as*;
 
 .ctafinal {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
+  @include flex($direction: column, $gap: 2rem, $align: center);
   text-align: center;
-  background: linear-gradient(190deg, #000000 50%, #643c2885);
+  background: linear-gradient(190deg, $cor-preta 50%, $cor-marrom);
   padding: 2rem;
 
   h3 {
@@ -18,10 +15,10 @@
   }
 
   button {
-    background-color: #ff6b00;
+    background-color: $cor-laranja-escuro;
     padding: 1rem;
     border-radius: 1.5rem;
-    color: white;
+    color: $cor-branca;
     border: none;
     cursor: pointer;
   }

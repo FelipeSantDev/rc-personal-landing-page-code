@@ -1,10 +1,27 @@
 //Variaveis
 $cor-branca: #fff;
+$cor-cinza: #666;
 $cor-preta-claro: #1e1e1e;
+$cor-preta-medio: #020202;
 $cor-preta: #0d0d0d;
 $cor-laranja-claro: #dc7800;
 $cor-laranja-escuro: #ff6b00;
 $cor-amarelo: #ffb800;
 $cor-beje-escuro: #dc790048;
+$cor-marrom: #643c2885;
 $cor-marrom-claro: #451c01;
 $cor-marrom-medio: #2D1D12;
+$cor-marrom-escuro: #1a0d05;
+
+// Mixins
+@mixin flex($direction: row,
+  $align: stretch,
+  $justify: start,
+  $gap: 0,
+  $wrap: nowrap) {
+  display: flex;
+  flex-flow: $direction $wrap;
+  align-items: $align;
+  justify-content: $justify;
+  gap: $gap;
+}

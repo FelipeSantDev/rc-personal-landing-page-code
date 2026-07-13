@@ -2,11 +2,8 @@
 
 .comofunciona {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  @include flex($direction: column, $gap: 2rem, $align: center);
   padding: 2rem;
-  align-items: center;
 
   &::before {
     content: '';
@@ -28,23 +25,17 @@
   }
 
   &__metodos {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    @include flex($direction: column, $gap: 2rem);
 
     &-metodo {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
+      @include flex($align: center, $gap: 1.5rem);
 
       img {
         width: 4rem;
       }
 
       &-textos {
-        display: flex;
-        flex-direction: column;
-        gap: .5rem;
+        @include flex($direction: column, $gap: .5rem);
 
         P:nth-child(1) {
           font-size: 1.5rem;

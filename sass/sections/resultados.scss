@@ -1,19 +1,13 @@
 @use '../abstracts/auxiliares' as*;
 
 .resultados {
-  display: flex;
-  flex-direction: column;
+  @include flex($direction: column, $gap: 2rem, $align: center);
   padding: 2rem;
-  gap: 2rem;
-  align-items: center;
   text-align: center;
   background: linear-gradient(to bottom, $cor-preta-claro 60%, $cor-preta);
 
   &__titulos {
-    display: flex;
-    flex-direction: column;
-    gap: 1.3rem;
-    align-items: center;
+    @include flex($direction: column, $gap: 1.3rem, $align: center);
 
     h4 {
       font-size: 1.4rem;
@@ -22,17 +16,11 @@
   }
 
   &__imagens {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+    @include flex($direction: column, $gap: 2rem, $align: center);
 
     &-marcos {
-      display: flex;
-      flex-direction: column;
-      gap: .6rem;
+      @include flex($direction: column, $gap: .6rem, $align: center);
       text-align: center;
-      align-items: center;
 
       img {
         border-radius: 1rem;
@@ -49,11 +37,8 @@
     }
 
     &-camila {
-      display: flex;
-      flex-direction: column;
-      gap: .6rem;
+      @include flex($direction: column, $gap: .6rem, $align: center);
       text-align: center;
-      align-items: center;
 
       img {
         border-radius: 1rem;
