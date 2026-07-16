@@ -2,7 +2,7 @@
 
 .hero {
   @include flex($direction: column, $gap: 1.6rem);
-  background-image: url(/Imagem/Hero\ mobile.png);
+  background-image: url(/Imagem/Hero\ mobile.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,7 +14,7 @@
   }
 
   @include respond(tablet-grande) {
-    background-image: url(/Imagem/Hero.png);
+    background-image: url(/Imagem/Hero.webp);
     margin-top: 8rem;
     padding-top: 22rem;
     padding-bottom: 20rem;

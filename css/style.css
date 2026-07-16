@@ -238,7 +238,7 @@ img {
   align-items: stretch;
   justify-content: start;
   gap: 1.6rem;
-  background-image: url(/Imagem/Hero\ mobile.png);
+  background-image: url(/Imagem/Hero\ mobile.webp);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -252,7 +252,7 @@ img {
 }
 @media (min-width: 48.75em) {
   .hero {
-    background-image: url(/Imagem/Hero.png);
+    background-image: url(/Imagem/Hero.webp);
     margin-top: 8rem;
     padding-top: 22rem;
     padding-bottom: 20rem;
@@ -698,7 +698,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(/Imagem/Como\ Funciona.png);
+  background-image: url(/Imagem/Como\ Funciona.webp);
   background-size: cover;
   background-position: center;
   filter: blur(4px);
