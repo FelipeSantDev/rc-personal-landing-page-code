@@ -8,10 +8,18 @@
 
   h3 {
     font-size: 1.7rem;
+
+    @include respond(desktop) {
+      font-size: 2.2rem;
+    }
   }
 
   p:nth-child(2) {
     font-size: 1.3rem;
+
+    @include respond(desktop) {
+      font-size: 1.6rem;
+    }
   }
 
   button {
@@ -21,10 +29,18 @@
     color: $cor-branca;
     border: none;
     cursor: pointer;
+
+    @include respond(desktop) {
+      font-size: 1.6rem;
+    }
   }
 
   p:nth-child(4) {
     font-size: 1rem;
+
+    @include respond(desktop) {
+      font-size: 1.2rem;
+    }
   }
 
 
