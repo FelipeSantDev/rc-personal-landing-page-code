@@ -18,21 +18,38 @@
   &__imagens {
     @include flex($direction: column, $gap: 2rem, $align: center);
 
+    @include respond(desktop) {
+      @include flex($gap: 3rem, $align: stretch);
+    }
+
     &-marcos {
       @include flex($direction: column, $gap: .6rem, $align: center);
       text-align: center;
 
+      @include respond(desktop) {
+        flex: 1; // divide o espaço igualmente entre os dois blocos
+      }
+
       img {
         border-radius: 1rem;
+        width: 100%;
       }
 
       p:nth-child(2) {
         font-size: 1.7rem;
+
+        @include respond(desktop) {
+          font-size: 2rem;
+        }
       }
 
       p:nth-child(3) {
         font-size: 1.2rem;
         text-align: justify;
+
+        @include respond(desktop) {
+          font-size: 1.4rem;
+        }
       }
     }
 
@@ -40,17 +57,30 @@
       @include flex($direction: column, $gap: .6rem, $align: center);
       text-align: center;
 
+      @include respond(desktop) {
+        flex: 1; // divide o espaço igualmente entre os dois blocos
+      }
+
       img {
         border-radius: 1rem;
+        width: 100%;
       }
 
       p:nth-child(2) {
         font-size: 1.7rem;
+
+        @include respond(desktop) {
+          font-size: 2rem;
+        }
       }
 
       p:nth-child(3) {
         font-size: 1.2rem;
         text-align: justify;
+
+        @include respond(desktop) {
+          font-size: 1.4rem;
+        }
       }
     }
   }

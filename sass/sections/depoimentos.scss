@@ -23,6 +23,11 @@
   &__track {
     display: flex;
     transition: transform .4s ease;
+
+    @include respond(desktop) {
+      align-items: center;
+      gap: 1.5rem;
+    }
   }
 
   &__cards {
@@ -34,6 +39,19 @@
     align-items: center;
     gap: 1rem;
     padding: 2rem;
+
+    @include respond(desktop) {
+      flex: 0 0 34%;
+      min-width: unset;
+      opacity: 0.4;
+      transform: scale(0.85);
+      transition: opacity .4s ease, transform .4s ease;
+
+      &.active {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
 
     &-fotos {
       display: flex;
@@ -59,11 +77,20 @@
 
     p:nth-child(3) {
       font-size: 1.6rem;
+
+      @include respond(desktop) {
+        font-size: 1.8rem;
+      }
     }
 
     p:nth-child(4) {
       font-size: 1.3rem;
       text-align: justify;
+
+      @include respond(desktop) {
+        font-size: 1.6rem;
+        max-width: 85%;
+      }
     }
   }
 

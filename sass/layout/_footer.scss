@@ -1,12 +1,27 @@
 @use '../abstracts/auxiliares' as*;
 
 .footer {
-  @include flex($direction: column, $gap: 2rem);
+  @include flex($direction: column, $gap: 1rem);
   background-color: $cor-preta;
 
+  @include respond(tablet-grande) {
+    @include flex($justify: space-around);
+  }
+
+  &__imagem {
+    @include flex($justify: center);
+
+    img {
+      width: 30rem;
+    }
+  }
 
   &__links {
-    @include flex($gap: .6rem, $justify: space-around, $align: center);
+    @include flex($gap: 4rem, $justify: space-around, $align: center);
+
+    @include respond(tablet-grande) {
+      @include flex($justify: center, $gap: 3rem, $align: center);
+    }
 
     &-redessociais {
       @include flex($direction: column, $gap: 1rem);

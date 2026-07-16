@@ -5,18 +5,40 @@
   background: linear-gradient(to bottom, $cor-preta-claro 60%, $cor-marrom-claro);
   padding: 2rem;
 
+  @include respond(desktop) {
+    @include flex($align: center, $gap: 2rem);
+  }
+
+  &__container {
+    @include flex($direction: column, $align: center, $gap: 2rem);
+  }
+
   &__textos {
     @include flex($direction: column, $gap: 1.6rem);
+
+    @include respond(desktop) {
+      @include flex($direction: column, $gap: 2rem);
+      text-align: justify;
+      width: 80%;
+    }
 
     h3 {
       font-size: 1.6rem;
       text-align: center;
+
+      @include respond(desktop) {
+        font-size: 2.3rem;
+      }
     }
 
     p {
       font-size: 1.3rem;
       max-width: 96%;
       text-align: center;
+
+      @include respond(desktop) {
+        font-size: 1.6rem;
+      }
     }
   }
 
@@ -24,5 +46,18 @@
     @include flex($direction: column, $gap: 1.6rem);
     text-align: center;
     color: $cor-laranja-claro;
+
+    @include respond(tablet-grande) {
+      @include flex($gap: 2rem, $align: center, $justify: space-around);
+    }
+
+    @include respond(desktop) {
+      width: 40rem;
+
+      svg {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
   }
 }

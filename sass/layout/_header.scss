@@ -19,6 +19,11 @@
     border: none;
     cursor: pointer;
 
+    @include respond(tablet-grande) {
+      display: none;
+    }
+
+
     span {
       display: block;
       width: 2.5rem;
@@ -54,11 +59,25 @@
     padding: 1rem 0;
     list-style: none;
 
+    @include respond(tablet-grande) {
+      display: flex;
+      flex-direction: row;
+      position: static;
+      width: auto;
+      background: transparent;
+      padding: 0;
+      gap: 2rem;
+    }
+
     li a {
       display: block;
       padding: 1rem 2rem;
       color: $cor-branca;
       text-decoration: none;
+
+      li a {
+        padding: 0;
+      }
 
       &:hover {
         color: $cor-laranja-escuro;
@@ -76,5 +95,12 @@
     margin: 0.5rem 2rem;
     padding: 0.6rem 1.4rem;
     text-align: center;
+
+    @include respond(tablet-grande) {
+      &:hover {
+        background: $cor-branca; // troca pela cor que você quer
+        color: $cor-preta;
+      }
+    }
   }
 }

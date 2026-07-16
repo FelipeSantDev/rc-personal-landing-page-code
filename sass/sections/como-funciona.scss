@@ -24,6 +24,12 @@
     z-index: 1;
   }
 
+  &__titulo {
+    @include respond(desktop) {
+      font-size: 2.4rem;
+    }
+  }
+
   &__metodos {
     @include flex($direction: column, $gap: 2rem);
 
@@ -39,10 +45,18 @@
 
         P:nth-child(1) {
           font-size: 1.5rem;
+
+          @include respond(desktop) {
+            font-size: 2rem;
+          }
         }
 
         P:nth-child(2) {
           font-size: 1.3rem;
+
+          @include respond(desktop) {
+            font-size: 1.6rem;
+          }
         }
       }
     }

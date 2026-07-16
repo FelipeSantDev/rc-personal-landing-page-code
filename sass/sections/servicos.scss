@@ -5,9 +5,18 @@
   padding: 2rem;
   background: linear-gradient(to right, $cor-marrom-medio, $cor-preta-claro 30%);
 
+  &__titulo {
+    @include respond(desktop) {
+      font-size: 2.2rem;
+    }
+  }
+
   &__icones {
     @include flex($direction: column, $gap: 2rem);
 
+    @include respond(desktop) {
+      @include flex($gap: 2.5rem, $align: stretch);
+    }
 
     &-icone {
       @include flex($direction: column, $gap: 1rem, $align: center);
@@ -19,6 +28,12 @@
       align-self: center;
       text-align: center;
 
+      @include respond(desktop) {
+        flex: 1;
+        max-width: none; // desativa o limite do mobile no desktop
+        align-self: stretch;
+      }
+
       img {
         width: 9rem;
       }
@@ -26,10 +41,18 @@
       p:nth-child(2) {
         font-size: 1.9rem;
         font-weight: 600;
+
+        @include respond(desktop) {
+          font-size: 2rem;
+        }
       }
 
       p:nth-child(3) {
         font-size: 1.4rem;
+
+        @include respond(desktop) {
+          font-size: 1.6rem;
+        }
       }
     }
   }

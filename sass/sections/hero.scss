@@ -3,26 +3,58 @@
 .hero {
   @include flex($direction: column, $gap: 1.6rem);
   background-image: url(/Imagem/Hero\ mobile.png);
-  background-position: top center;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-bottom: 40rem;
   min-height: 100vh;
+  padding-bottom: 40rem;
 
+  @include respond(tablet) {
+    padding-bottom: 50rem;
+  }
+
+  @include respond(tablet-grande) {
+    background-image: url(/Imagem/Hero.png);
+    margin-top: 8rem;
+    padding-top: 22rem;
+    padding-bottom: 20rem;
+  }
+
+  @include respond(desktop) {
+    margin-top: 10rem;
+    padding-bottom: 30rem;
+  }
 
   &__textos {
     @include flex($direction: column, $gap: 2rem);
     padding: 12rem 0 0 1.5rem;
 
+    @include respond(tablet-grande) {
+      max-width: 60%;
+      padding: 0 0 0 1.5rem;
+    }
+
+    @include respond(desktop) {
+      @include flex($direction: column, $gap: 3rem);
+    }
+
     h1 {
       font-size: 3rem;
       max-width: 100%;
+
+      @include respond(tablet) {
+        font-size: 4rem;
+      }
     }
 
     h2 {
       font-size: 1.9rem;
       font-weight: 500;
       max-width: 80%;
+
+      @include respond(tablet-grande) {
+        font-size: 2.2rem;
+      }
     }
   }
 
@@ -37,12 +69,57 @@
       background-color: $cor-laranja-claro;
       border: none;
       color: $cor-branca;
+
+      @include respond(tablet-grande) {
+        font-size: 1.6rem;
+        padding: 0.7rem 0.5rem;
+      }
     }
 
     button:nth-child(2) {
       background-color: $cor-branca;
       border: 0.3rem solid $cor-amarelo;
       color: $cor-preta;
+    }
+  }
+
+  &__scroll {
+    display: none; // escondido por padrão (mobile/tablet)
+
+    @include respond(tablet) {
+      @include flex($direction: column, $align: center, $gap: 0.5rem);
+      position: absolute;
+      bottom: 2rem;
+      left: 1.5rem;
+      color: $cor-branca;
+      opacity: 0.7;
+      transition: opacity 0.1s ease-out;
+    }
+
+    span {
+      font-size: 0.9rem;
+      font-weight: 400;
+    }
+
+    &-seta {
+      width: 1.2rem;
+      height: 1.2rem;
+      border-right: 0.2rem solid $cor-branca;
+      border-bottom: 0.2rem solid $cor-branca;
+      transform: rotate(45deg);
+      animation: scroll-bounce 1.5s infinite;
+    }
+  }
+
+  @keyframes scroll-bounce {
+
+    0%,
+    100% {
+      transform: rotate(45deg) translateY(0);
+    }
+
+    50% {
+      transform: rotate(45deg) translateY(0.5rem);
     }
   }
 }

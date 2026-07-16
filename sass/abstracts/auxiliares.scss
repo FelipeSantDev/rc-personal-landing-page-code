@@ -25,3 +25,24 @@ $cor-marrom-escuro: #1a0d05;
   justify-content: $justify;
   gap: $gap;
 }
+
+
+@mixin respond($tamanho) {
+  @if $tamanho ==tablet {
+    @media (min-width: 37.5em) {
+      @content;
+    }
+  }
+
+  @else if $tamanho ==tablet-grande {
+    @media (min-width: 48.75em) {
+      @content;
+    }
+  }
+
+  @else if $tamanho ==desktop {
+    @media (min-width: 66.875em) {
+      @content;
+    }
+  }
+}
