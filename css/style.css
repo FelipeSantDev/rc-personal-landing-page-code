@@ -314,24 +314,50 @@ img {
   gap: 1rem;
   padding: 0 1.5rem;
 }
-.hero__botoes button {
+.hero__botoes-segundobotao {
+  background-color: #fff;
+  border: 0.3rem solid #ffb800;
+  color: #0d0d0d;
   font-size: 1.2rem;
   padding: 0.5rem 0.3rem;
   border-radius: 2rem;
-  background-color: #dc7800;
-  border: none;
-  color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
 }
 @media (min-width: 48.75em) {
-  .hero__botoes button {
+  .hero__botoes-segundobotao {
     font-size: 1.6rem;
     padding: 0.7rem 0.5rem;
   }
 }
-.hero__botoes button:nth-child(2) {
-  background-color: #fff;
-  border: 0.3rem solid #ffb800;
-  color: #0d0d0d;
+@media (min-width: 66.875em) {
+  .hero__botoes-segundobotao:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 140, 0, 0.4);
+  }
+}
+.hero__botoes-primeirobotao {
+  font-size: 1.2rem;
+  padding: 0.5rem 0.3rem;
+  border-radius: 2rem;
+  background-color: #dc7800;
+  border: 0.3rem solid rgba(100, 60, 40, 0.5215686275);
+  color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+@media (min-width: 48.75em) {
+  .hero__botoes-primeirobotao {
+    font-size: 1.6rem;
+    padding: 0.7rem 0.5rem;
+  }
+}
+@media (min-width: 66.875em) {
+  .hero__botoes-primeirobotao:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 140, 0, 0.4);
+  }
 }
 .hero__scroll {
   display: none;
@@ -388,6 +414,7 @@ img {
     align-items: center;
     justify-content: start;
     gap: 2rem;
+    padding: 10rem 2rem;
   }
 }
 .sobre__container {
@@ -472,6 +499,11 @@ img {
   background: linear-gradient(to right, #2D1D12, #1e1e1e 30%);
 }
 @media (min-width: 66.875em) {
+  .servicos {
+    padding: 10rem 2rem;
+  }
+}
+@media (min-width: 66.875em) {
   .servicos__titulo {
     font-size: 2.2rem;
   }
@@ -543,6 +575,11 @@ img {
   padding: 2rem;
   text-align: center;
   background: linear-gradient(to bottom, #1e1e1e 60%, #0d0d0d);
+}
+@media (min-width: 66.875em) {
+  .resultados {
+    padding: 10rem 2rem;
+  }
 }
 .resultados__titulos {
   display: flex;
@@ -649,6 +686,11 @@ img {
   gap: 2rem;
   padding: 2rem;
 }
+@media (min-width: 66.875em) {
+  .comofunciona {
+    padding: 10rem 2rem;
+  }
+}
 .comofunciona::before {
   content: "";
   position: absolute;
@@ -721,6 +763,11 @@ img {
   gap: 3rem;
   background: linear-gradient(180deg, #020202, #1a0d05);
   color: #fff;
+}
+@media (min-width: 66.875em) {
+  .depoimentos {
+    padding: 10rem 2rem;
+  }
 }
 .depoimentos__carrossel {
   width: 100%;

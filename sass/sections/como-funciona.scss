@@ -5,6 +5,10 @@
   @include flex($direction: column, $gap: 2rem, $align: center);
   padding: 2rem;
 
+  @include respond(desktop) {
+    padding: 10rem 2rem;
+  }
+
   &::before {
     content: '';
     position: absolute;

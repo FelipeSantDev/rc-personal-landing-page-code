@@ -7,6 +7,7 @@
 
   @include respond(desktop) {
     @include flex($align: center, $gap: 2rem);
+    padding: 10rem 2rem;
   }
 
   &__container {

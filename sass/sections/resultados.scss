@@ -6,6 +6,10 @@
   text-align: center;
   background: linear-gradient(to bottom, $cor-preta-claro 60%, $cor-preta);
 
+  @include respond(desktop) {
+    padding: 10rem 2rem;
+  }
+
   &__titulos {
     @include flex($direction: column, $gap: 1.3rem, $align: center);
 

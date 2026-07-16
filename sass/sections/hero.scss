@@ -62,24 +62,52 @@
     @include flex($gap: 1rem);
     padding: 0 1.5rem;
 
-    button {
+    &-segundobotao {
+      background-color: $cor-branca;
+      border: 0.3rem solid $cor-amarelo;
+      color: $cor-preta;
       font-size: 1.2rem;
       padding: 0.5rem 0.3rem;
       border-radius: 2rem;
-      background-color: $cor-laranja-claro;
-      border: none;
-      color: $cor-branca;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-decoration: none;
 
       @include respond(tablet-grande) {
         font-size: 1.6rem;
         padding: 0.7rem 0.5rem;
       }
+
+      @include respond(desktop) {
+        &:hover {
+          cursor: pointer;
+          transform: translateY(-3px);
+          box-shadow: 0 8px 20px rgba(255, 140, 0, 0.4);
+        }
+      }
     }
 
-    button:nth-child(2) {
-      background-color: $cor-branca;
-      border: 0.3rem solid $cor-amarelo;
-      color: $cor-preta;
+    &-primeirobotao {
+      font-size: 1.2rem;
+      padding: 0.5rem 0.3rem;
+      border-radius: 2rem;
+      background-color: $cor-laranja-claro;
+      border: 0.3rem solid $cor-marrom;
+      color: $cor-branca;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+
+      @include respond(tablet-grande) {
+        font-size: 1.6rem;
+        padding: 0.7rem 0.5rem;
+      }
+
+      @include respond(desktop) {
+        &:hover {
+          cursor: pointer;
+          transform: translateY(-3px);
+          box-shadow: 0 8px 20px rgba(255, 140, 0, 0.4);
+        }
+      }
     }
   }
 
